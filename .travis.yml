@@ -10,11 +10,8 @@ services:
   - mysql
   
 install:
-  - travis_retry composer install --no-interaction --prefer-source
-  - travis_retry npm install
+  - travis_retry composer install --no-interaction --prefer-source 
 
-before_script: 
-  - travis_retry gulp --production
 
 script:
   - if [ "$TRAVIS_PHP_VERSION" != "5.5.9" ] && [ "$TRAVIS_PHP_VERSION" != "5.5" ] && [ "$TRAVIS_PHP_VERSION" != "5.6" ]; then vendor/bin/phpunit; fi
