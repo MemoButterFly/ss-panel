@@ -138,7 +138,7 @@ $app->group('/mu', function () {
 $app->group('/res', function () {
     $this->get('/captcha/{id}', 'App\Controllers\ResController:captcha');
 });
-
+$app->run();
 return $app;
 
 
