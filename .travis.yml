@@ -13,8 +13,7 @@ install:
   - travis_retry composer install --no-interaction --prefer-source
   - travis_retry npm install
 
-before_script:
-  - travis_retry php artisan vendor:publish
+before_script: 
   - travis_retry gulp --production
 
 script:
